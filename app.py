@@ -10,8 +10,9 @@ class TextRequest(BaseModel):
     text: str
 
 # Load tokenizer và model 1 lần duy nhất
-tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
-model = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/paraphrase-MiniLM-L3-v2")
+model = AutoModel.from_pretrained("sentence-transformers/paraphrase-MiniLM-L3-v2")
+
 model.eval()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
