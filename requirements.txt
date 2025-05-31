@@ -2,4 +2,4 @@
 fastapi
 uvicorn
 transformers
-torch==2.1.0+cpu
+torch==2.1.0
